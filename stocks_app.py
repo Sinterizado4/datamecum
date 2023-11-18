@@ -1,5 +1,5 @@
 import streamlit as st
-import yfinance as yahooFinance
+import yfinance as yF
 import plotly.graph_objs as go
 
 # Selectores
@@ -9,7 +9,7 @@ with st.sidebar:
     period = st.selectbox(label = "Periodo", options = ['1d','5d','1mo','3mo','6mo','1y','2y','5y','10y','ytd','max'])
 
 # Datos
-tickets = yahooFinance.Ticker(cia)
+tickets = yF.Ticker(cia)
 stocks = tickets.history(period = period, interval = interval)
 
 if len(stocks) > 0:
