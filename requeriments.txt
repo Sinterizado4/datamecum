@@ -2,5 +2,5 @@ pandas
 matplotlib
 numpy
 yfinance
-plotly
+plotly.graph_objs
 
